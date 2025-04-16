@@ -5,6 +5,7 @@ import ProductRouter from "./route/ProductRoute.js";
 import AgenceRouter from "./route/AgenceRoute.js";
 
 import dotenv from "dotenv";
+import VehiculeRouter from "./route/VehiculeRoute.js";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/", UserRouter);
 app.use("/", ProductRouter);
 app.use("/", AgenceRouter);
+app.use("/", VehiculeRouter);
 
 db.sync()
   .then(() => {
