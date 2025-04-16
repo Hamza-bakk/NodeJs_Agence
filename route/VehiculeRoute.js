@@ -5,4 +5,5 @@ const VehiculeRouter = Router();
 
 VehiculeRouter.get("/vehicule", GetAllVehicule);
 
-export default VehiculeRouter;
+export default VehiculeRouter
+
