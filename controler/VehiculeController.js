@@ -11,3 +11,5 @@ export const GetAllVehicule = async (req, res) => {
     throw new Error("Internal server error");
   }
 };
+
+
