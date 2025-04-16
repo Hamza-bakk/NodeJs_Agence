@@ -2,6 +2,7 @@ import express from "express";
 import { db } from "./db.js";
 import UserRouter from "./route/UserRoute.js";
 import ProductRouter from "./route/ProductRoute.js";
+import AgenceRouter from "./route/AgenceRoute.js";
 
 import dotenv from "dotenv";
 
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use("/", UserRouter);
 app.use("/", ProductRouter);
+app.use("/", AgenceRouter);
 
 db.sync()
   .then(() => {
