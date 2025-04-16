@@ -12,6 +12,18 @@ export const GetAllAgence = async (req, res) => {
   }
 };
 
+export const CreateAgence = async (req, res) => {
+  try {
+    const agence = await Agence.create(req.body);
+    agence
+      ? res.json(agence)
+      : res.status(404).json({ error: "agence not found" });
+  } catch (error) {
+    console.error("Error creating Agence:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
 export const UpdateAgence = async (req, res) => {
   try {
     const agence = await Agence.update(req.body, {

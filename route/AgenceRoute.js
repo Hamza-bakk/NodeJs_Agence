@@ -1,12 +1,17 @@
 import { Router } from "express";
 
-import { GetAllAgence, UpdateAgence } from "../controler/AgenceController.js";
-import { GetAllAgence, DeleteAgence } from "../controler/AgenceController.js";
+import {
+  CreateAgence,
+  GetAllAgence,
+  UpdateAgence,
+  DeleteAgence,
+} from "../controler/AgenceController.js";
 
 const AgenceRouter = Router();
 
 AgenceRouter.get("/agence", GetAllAgence);
-AgenceRouter.put("agence", UpdateAgence);
+AgenceRouter.post("/agence", CreateAgence);
+AgenceRouter.put("/agence/:id", UpdateAgence);
 AgenceRouter.delete("/agence/:id", DeleteAgence);
 
 export default AgenceRouter;
